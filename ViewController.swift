@@ -37,10 +37,6 @@ class ViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDele
         
         check_record_permission()
         
-        //Add right bar button:
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Records", style: .plain, target: self, action: #selector(OpenDoc))
-        
     }
     
     //Button action to start recording:
@@ -328,19 +324,6 @@ class ViewController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDele
     }
     
     
-    
-    //Navigation bar button action:
-    
-    @objc func OpenDoc()
-    {
-//        let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypeMPEG4Audio as String], in: .open)
-//        documentPicker.delegate = self as? UIDocumentPickerDelegate
-//        documentPicker.allowsMultipleSelection = false
-//        present(documentPicker, animated: true, completion: nil)
-        let sbObj = UIStoryboard(name: "Main", bundle: nil)
-        let svcObj = sbObj.instantiateViewController(withIdentifier: "ViewController2SB")
-        navigationController?.pushViewController(svcObj, animated: true)
-    }
     
 }
     
